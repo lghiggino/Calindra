@@ -72,16 +72,15 @@ header h1{
 }
 
 header span{
+    display: inline-block;
     font-weight: 300;
     font-size: 16.2px;
     line-height: 19px;
-
-    /* identical to box height */
     display: flex;
     align-items: flex-end;
     letter-spacing: 5.4px;
+    color: red;
 
-    color: #846219;
 }
 
 header a{
@@ -244,6 +243,7 @@ footer .fab:hover{
         background-size: 70%;
         background-position-x: right;
         background-position-y: bottom;
+    }
 }
 
 
@@ -261,3 +261,4 @@ footer .fab:hover{
         display: visible;
     }
 }
+
