@@ -6,9 +6,11 @@ export default function Footer(){
         <footer className="gray-bg">
             <section className="social">
                 <h4>Follow Us</h4>
-                <Link href="http://www.youtube.com/zuttermanTapes" ><a target="blank"> <FaYoutube/> </a></Link>
-                <Link href="http://www.facebook.com/zuttermanTapes"><a target="blank"> <FaFacebookF/> </a></Link>
-                <Link href="http://www.twitter.com/zuttermanTapes" ><a target="blank"> <FaTwitter/> </a></Link>
+                <div>
+                    <Link href="http://www.youtube.com/zuttermanTapes" ><a target="blank"> <FaYoutube className="circle-txt"/> </a></Link>
+                    <Link href="http://www.facebook.com/zuttermanTapes"><a target="blank"> <FaFacebookF className="circle-txt"/> </a></Link>
+                    <Link href="http://www.twitter.com/zuttermanTapes" ><a target="blank"> <FaTwitter className="circle-txt"/> </a></Link>
+                </div>
             </section>
             <section className="address">
                 <h4>Contact</h4>

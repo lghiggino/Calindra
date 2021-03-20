@@ -109,14 +109,18 @@ header nav .flex{
     display:flex;
 }
 
-header h1{
-    margin-top:0vh;
+header a.logo-container{
+    display:flex;
+    text-decoration: none;
+}
+
+header a.logo-container h1{
+    margin-top:1vh;
     font-weight: bold;
     font-size: 41.2px;
     line-height: 48px;
     display: flex;
     align-items: flex-end;
-
     color:var(--main-gold);
 }
 
@@ -124,7 +128,6 @@ header span{
     font-weight: 300;
     font-size: 16.2px;
     line-height: 19px;
-
     /* identical to box height */
     display: flex;
     align-items: flex-end;
@@ -134,7 +137,7 @@ header span{
     margin: -0.5rem 0 0 0;
 }
 
-header a{
+header a.link{
     font-size: 16px;
     font-weight: 300;
     line-height: 19px;
@@ -145,12 +148,12 @@ header a{
     margin: 45px 0 0 43px;
 }
 
-header a:hover{
+header a.link:hover{
     color:var(--main-blue);
     font-weight: 400;
 }
 
-header a.mr-2{
+header a.link.mr-2{
     margin-right: 5%
 }
 /* END OF HEADER */
@@ -181,7 +184,7 @@ header a.mr-2{
 }
 
 .title, .image{
-    outline: 1px solid red
+    /* outline: 1px solid red */
 }
 
 .blue-bg{
@@ -227,7 +230,28 @@ header a.mr-2{
 }
 
 footer{
-    max-height: 30vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .social, footer .address{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0 0 5rem;
+}
+
+footer .social{
+    flex: 1;
+    
+}
+footer .address{
+    flex: 2;
+}
+
+footer h4{
+    font-weight: bold;
+    font-size: 27.2px;
+    line-height: 32px;
 }
 
 footer a{
@@ -236,10 +260,19 @@ footer a{
     border: 2px solid var(--dark-gray);
     border-radius: 50%;
     text-decoration: none;
-    width: 25px;
-    height: 25px;
-    padding:1rem;
-    margin: 5px;
+    width: 30px;
+    height: 30px;
+    padding:1rem 0.1rem 0.1rem 1rem;
+    margin: 1rem 1rem 0 0;
+}
+
+footer ul{
+    margin: 1rem 1rem 0 0;
+}
+
+footer ul li{
+    font-size: 16.2px;
+    line-height: 19px;
 }
 
 footer a:hover{
@@ -247,20 +280,11 @@ footer a:hover{
     border: 2px solid var(--main-blue);
 }
 
-footer .fab{
-    
-
-}
-
-footer .fab:hover{
-
-}
-
 @media screen and (max-width: 1280px){
     header h1{
         margin-top: 0;
     }
-    header a{
+    header a.link{
         margin: 1.5rem 0 0 43px;
     }
 }
@@ -273,16 +297,17 @@ footer .fab:hover{
     header h1{
         margin-top: 0.5rem;
     }
-    header a{
+    header a.link{
         margin: 0.5rem 0 0 43px;
     }
     .gray-bg, .blue-bg{
         flex-direction: column;
     }
     .gray-bg h2{
-        font-size: 53.2px;
-        line-height: 62px;
-        margin-top: 30vh;
+        font-weight: bold;
+        font-size: 67.7px;
+        line-height: 79px;
+        margin: 15% 0 0 30%;
     }
     .blue-bg h2{
         font-size: 41.2px;
@@ -305,18 +330,41 @@ footer .fab:hover{
 
 
 @media screen and (max-width: 458px){
-    header{
+    header {
         height: 10vh;
     }
     nav{
         justify-content: center;
     }
-    .is-hidden-mobile{
+    header a.logo-container{
+        justify-content: space-evenly;
+    }
+    header nav .is-hidden-mobile, header nav h1.is-hidden-mobile{
         display: none;
     }
-    .is-hidden-desktop{
-        display: visible;
+    header .is-hidden-desktop{
+        display: flex;
+        height: 10vh;
+        background: var(--main-white);
+        color: var(--main-gold);
+        font-size: 36.5px;
+        margin: 2vh 0vw 0 0;
     }
+    
+    .gray-bg h2{
+        font-weight: bold;
+        font-size: 53.2px;
+        line-height: 62px;
+        margin: 15% 0 0 15%;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer .social, footer .address{
+        margin: 1rem auto 0;
+        flex: 1;  
+    }
+    
 }
 
 
