@@ -1,12 +1,11 @@
 import Layout from "../components/Layout"
 
-export default function models(){
+export default function guarantee(){
     return(
         <Layout>
             <section className="blue-bg">
-                <h2> hello from models</h2>
+                <h2> hello from guarantee</h2>
             </section>
-            
         </Layout>
         
     )
