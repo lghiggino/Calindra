@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+*{
+    outline: 1px solid red;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+}
+
+header .dots{
+    background: #E2E0B8;
+}
+
+header .logo{
+    height: 10vh;
+}
+
+header .is-hidden-desktop{
+    display: none;
+}
+
+header nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+header nav .flex{
+    display:flex;
+}
+
+.ml-2{
+    margin-left: 5%;
+}
+
+.mr-2{
+    margin-right: 5%;
+}
+
+header h1{
+    /* position: absolute;
+    width: 168px;
+    height: 48px;
+    left: 147px;
+    top: 20px; */
+    margin-top:1vh;
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 41.2px;
+    line-height: 48px;
+    display: flex;
+    align-items: flex-end;
+
+    color: #846219;
+}
+
+header span{
+    /* position: absolute;
+    width: 161px;
+    height: 19px;
+    left: 151px;
+    top: 68px; */
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16.2px;
+    line-height: 19px;
+
+    /* identical to box height */
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 5.4px;
+
+    color: #846219;
+}
+
+header a{
+    font-family: "Roboto Condensed";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 5.4px;
+    text-align: left;
+    color: #846219;
+    text-decoration: none;
+}
+
+header a.mr-2{
+    margin-right: 5%
+}
+
+
+.gray-bg{
+    width:100%;
+    height: 90vh;
+    background: #E9E9E9;
+    position: relative;
+    top: 10vh;
+}
+
+.blue-bg{
+    width:100%;
+    height: 100vh;
+    background: #506FA9;
+
+
+}
+
+@media screen and (max-width: 558px){
+    header{
+        height: 10vh;
+    }
+    nav{
+        justify-content: center;
+    }
+    .is-hidden-mobile{
+        display: none;
+    }
+    .is-hidden-desktop{
+        display: visible;
+    }
+}
