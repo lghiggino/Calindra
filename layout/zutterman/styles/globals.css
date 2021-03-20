@@ -44,6 +44,7 @@ table {
 }
 /* END OF RESET */
 
+/* GLOBAL */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 :root{
@@ -62,6 +63,21 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.ml-2{
+    margin-left: 5%;
+}
+
+.ml-4{
+    margin-left: 10%;
+}
+
+.mr-2{
+    margin-right: 5%;
+}
+
+/* END OF GLOBAL  */
+
+/* HEADER */
 header{
     position: absolute;
     width: 100%;
@@ -91,18 +107,6 @@ header nav{
 
 header nav .flex{
     display:flex;
-}
-
-.ml-2{
-    margin-left: 5%;
-}
-
-.ml-4{
-    margin-left: 10%;
-}
-
-.mr-2{
-    margin-right: 5%;
 }
 
 header h1{
@@ -140,9 +144,15 @@ header a{
     margin: 45px 0 0 43px;
 }
 
+header a:hover{
+    color:var(--main-blue);
+    font-weight: 400;
+}
+
 header a.mr-2{
     margin-right: 5%
 }
+/* END OF HEADER */
 
 .gray-bg{
     width:100%;
