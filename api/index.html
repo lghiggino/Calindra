@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   </head>
   <body>
-    <nav class="navbar has-shadow " style="background-color: #d50d1a;">
+    <nav class="navbar has-shadow" style="background-color: #d50d1a;">
         <div class="navbar-brand">
             <a class="navbar-item">
                 <img src="./images/logo-lojas-americanas.jpg" alt="logo americanas" style="max-height: 70px;" class="py-2 px-2">
@@ -19,20 +19,22 @@
                 <span></span>
             </a>
         </div>
-        <div class="navbar-item">
-            <div class="field">
-                <p class="control has-icons-left has-icons-right">
-                  <input class="input is-rounded" type="busca" placeholder="Busque aqui o produto desejado">
-                  <span class="icon is-small is-right" id="search-icon">
-                    <i class="fas fa-search"></i>
-                  </span>
-                </p>
-              </div>
+        <div class="navbar-item is-desktop-12">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="text" placeholder="Busque aqui o produto desejado">
+            </div>
+            <div class="control">
+              <a class="button is-black has-text-white" id="search-button">
+                Buscar
+              </a>
+            </div>
+          </div>
         </div>
         <div class="navbar-menu" id="nav-links">
             <div class="navbar-end">
-                <a href="/" class="navbar-item ">login/cadastro</a>
-                <a href="/" class="navbar-item ">carrinho<span> (0)</span></a>
+                <a href="/" class="navbar-item has-text-black">login</a>
+                <a href="/" class="navbar-item has-text-black">cadastro</a>
             </div>
         </div>
     </nav>
@@ -40,45 +42,24 @@
     <section class="section">
         <div class="container">
             <div class="columns is-multiline" id="card-container">
-                <div class="column is-2-desktop is-6-tablet is-12-mobile">
-                    <!-- start card -->
-                    <div class="card">
-                          <div class="content">
-                            <p class="title is-5 ml-2">Conjunto Com 5 Carrinhos Hot Wheels Mattel Sortidos</p>
-                            <p class="is-5 ml-2">Id: 43530066</p>
-                            <p class="is-5 ml-2">Score: 213.12798</p>
-                            <p class="is-5 ml-2 mb-3">Visits: 424</p>
-                          </div>
-                    </div>
-                    <!-- end card -->
-                </div>
-                <div class="column is-2-desktop is-6-tablet is-12-mobile">
-                    <!-- start card -->
-                    <div class="card">
-                          <div class="content">
-                            <p class="title is-5 ml-2">Conjunto Com 5 Carrinhos Hot Wheels Mattel Sortidos</p>
-                            <p class="is-5 ml-2">Id: 43530066</p>
-                            <p class="is-5 ml-2">Score: 213.12798</p>
-                            <p class="is-5 ml-2 mb-3">Visits: 424</p>
-                          </div>
-                    </div>
-                    <!-- end card -->
-                </div>
-                <div class="column is-2-desktop is-6-tablet is-12-mobile">
-                    <!-- start card -->
-                    <div class="card">
-                          <div class="content">
-                            <p class="title is-5 ml-2">Conjunto Com 5 Carrinhos Hot Wheels Mattel Sortidos</p>
-                            <p class="is-5 ml-2">Id: 43530066</p>
-                            <p class="is-5 ml-2">Score: 213.12798</p>
-                            <p class="is-5 ml-2 mb-3">Visits: 424</p>
-                          </div>
-                    </div>
-                    <!-- end card -->
-                </div>
+                <div class="column is-12-mobile is-6-tablet is-4-desktop"></div>
+                  <div class="column is-12">
+                    <p class="title is-6">Olá! Faça sua busca no campo acima, e compare os resultados</p>
+                  </div>
             </div>
         </div>
     </section>
+
+    <section class="section">
+      <div class="container">
+          <div class="column is-12">
+            <p class="is-6 is-hidden" id="sugg-title">Você também pode gostar de:</p>
+          </div>
+          <div class="columns is-multiline" id="sugg-container">
+          </div>
+          
+      </div>
+    </section>    
 
     <script src="./js/index.js"></script>
   </body>
