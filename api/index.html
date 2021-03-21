@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loja API</title>
+    <script src="https://kit.fontawesome.com/33c90e5f6c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  </head>
+  <body>
+    <nav class="navbar has-shadow" style="background-color: #d50d1a;">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                <img src="./images/logo-lojas-americanas.jpg" alt="logo americanas" style="max-height: 70px;" class="py-2 px-2">
+            </a>
+            <a class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="navbar-item is-desktop-12">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="text" placeholder="Busque aqui o produto desejado">
+            </div>
+            <div class="control">
+              <a class="button is-black has-text-white" id="search-button">
+                Buscar
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-menu" id="nav-links">
+            <div class="navbar-end">
+                <a href="/" class="navbar-item has-text-black">login</a>
+                <a href="/" class="navbar-item has-text-black">cadastro</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline" id="card-container">
+                <div class="column is-12-mobile is-6-tablet is-4-desktop"></div>
+                  <div class="column is-12">
+                    <p class="title is-6">Olá! Faça sua busca no campo acima, e compare os resultados</p>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+          <div class="column is-12">
+            <p class="is-6 is-hidden" id="sugg-title">Você também pode gostar de:</p>
+          </div>
+          <div class="columns is-multiline" id="sugg-container">
+          </div>
+          
+      </div>
+    </section>    
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
+

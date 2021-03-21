@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+:root{
+    --main-white:#FFFFFF;
+    --main-blue: #506FA9;
+    --main-gray: #E9E9E9;
+    --dark-gray: #716565;
+    --main-gold: #846219;
+}
+
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* *{
+    outline: 1px solid red;
+} */
+
+header{
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    left: 0px;
+    top: 0px;
+    background:var(--main-white);
+}
+
+header .dots{
+    background: #E2E0B8;
+}
+
+header .logo{
+    height: 10vh;
+}
+
+header .is-hidden-desktop{
+    display: none;
+}
+
+header nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+header nav .flex{
+    display:flex;
+}
+
+.ml-2{
+    margin-left: 5%;
+}
+
+.ml-4{
+    margin-left: 10%;
+}
+
+.mr-2{
+    margin-right: 5%;
+}
+
+header h1{
+    margin-top:1vh;
+    font-weight: bold;
+    font-size: 41.2px;
+    line-height: 48px;
+    display: flex;
+    align-items: flex-end;
+
+    color:var(--main-gold);
+}
+
+header span{
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16.2px;
+    line-height: 19px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 5.4px;
+    color: red;
+
+}
+
+header a{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 5.4px;
+    text-align: left;
+    color:var(--main-gold);
+    text-decoration: none;
+    margin: 45px 0 0 43px;
+}
+
+header a.mr-2{
+    margin-right: 5%
+}
+
+.gray-bg{
+    width:100%;
+    height: 90vh;
+    background: var(--main-gray);
+    position: relative;
+    top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.gray-bg h2{
+    font-weight: bold;
+    font-size: 82.2px;
+    line-height: 96px;
+    color: #716565;
+    margin: 30% 0 0 30%;
+}
+
+.gray-bg img{
+    margin-top: 25%;
+    width: 100%;
+    height: auto;
+}
+
+.title, .image{
+    outline: 1px solid red
+}
+
+.blue-bg{
+    width:100%;
+    height: 100vh;
+    background:var(--main-blue);
+    background-image: url("../images/measure2.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: right;
+    position: relative;
+    top: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.blue-bg h2{
+    font-weight: bold;
+    font-size: 69.2px;
+    line-height: 81px;
+    color: #FFFFFF;
+    margin: 30% 0 0 20%;
+    max-width: 50%;
+}
+
+.blue-bg p{
+    font-weight: 300;
+    font-size: 48.2px;
+    line-height: 56px;
+    display: flex;
+    align-items: flex-end;
+    color: #FFFFFF;
+    margin: 0 0 0 20%;
+    max-width: 50%;
+
+}
+
+.blue-bg .image img{
+    position: relative;
+    left:0;
+    width: 100%;
+    height: auto;
+}
+
+footer{
+    max-height: 30vh;
+}
+
+footer a{
+    display: inline-block;
+    color: var(--dark-gray);
+    border: 2px solid var(--dark-gray);
+    border-radius: 50%;
+    text-decoration: none;
+    width: 25px;
+    height: 25px;
+    padding:1rem;
+    margin: 5px;
+}
+
+footer a:hover{
+    color: var(--main-blue);
+    border: 2px solid var(--main-blue);
+}
+
+footer .fab{
+    
+
+}
+
+footer .fab:hover{
+
+}
+
+@media screen and (max-width: 1280px){
+    header h1{
+        margin-top: 0;
+    }
+    header a{
+        margin: 1.5rem 0 0 43px;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .flex.column{
+        flex-direction: column;
+    }
+    header h1{
+        margin-top: 0.5rem;
+    }
+    header a{
+        margin: 0.5rem 0 0 43px;
+    }
+    .gray-bg, .blue-bg{
+        flex-direction: column;
+    }
+    .gray-bg h2{
+        font-size: 53.2px;
+        line-height: 62px;
+        margin-top: 30vh;
+    }
+    .blue-bg h2{
+        font-size: 41.2px;
+        line-height: 48px;
+    }
+    .blue-bg p{
+        font-size: 26.2px;
+        line-height: 31px;
+    }
+
+    .blue-bg{
+        background:var(--main-blue);
+        background-image: url("../images/measure2.png");
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position-x: right;
+        background-position-y: bottom;
+    }
+}
+
+
+@media screen and (max-width: 458px){
+    header{
+        height: 10vh;
+    }
+    nav{
+        justify-content: center;
+    }
+    .is-hidden-mobile{
+        display: none;
+    }
+    .is-hidden-desktop{
+        display: visible;
+    }
+}
+
