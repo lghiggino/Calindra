@@ -6,6 +6,8 @@ header{
     left: 0px;
     top: 0px;
     background:var(--main-white);
+    display:flex;
+    flex-flow: row wrap;
 }
 
 header .dots{

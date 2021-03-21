@@ -75,68 +75,50 @@ body{
     margin-right: 5%;
 }
 
+.flex{
+    display: flex;
+    flex-flow: row wrap;
+}
 /* END OF GLOBAL  */
 
 /* HEADER */
 header{
     position: absolute;
     width: 100%;
-    height: 10vh;
+    max-height: 10vh;
     left: 0px;
     top: 0px;
     background:var(--main-white);
-    display:flex;
-    flex-flow: row wrap;
-}
-
-header .dots{
-    background: #E2E0B8;
 }
 
 header .logo{
+    position: relative;
     height: 10vh;
+    margin: 0 0 0 3rem;
 }
 
-header .is-hidden-desktop{
-    display: none;
-}
-
-header nav{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-
-header nav .flex{
-    display:flex;
-}
-
-header a.logo-container{
-    display:flex;
-    text-decoration: none;
-}
-
-header a.logo-container h1{
-    margin-top:1vh;
+header .text-container h1{
+    margin:1vh 0 0 -5rem;
     font-weight: bold;
     font-size: 41.2px;
-    line-height: 48px;
+    line-height: 36px;
     display: flex;
     align-items: flex-end;
-    color:var(--main-gold);
+    color: var(--main-gold);
 }
 
-header span{
+header .text-container span{
     font-weight: 300;
     font-size: 16.2px;
-    line-height: 19px;
-    /* identical to box height */
-    display: flex;
-    align-items: flex-end;
+    line-height: 8px;
     letter-spacing: 5.4px;
 
-    color: #846219;
-    margin: -0.5rem 0 0 0;
+    color: var(--main-gold);
+    margin: -1rem 0 0 -5rem;
+}
+
+.links-container{
+
 }
 
 header a.link{
@@ -155,18 +137,17 @@ header a.link:hover{
     font-weight: 400;
 }
 
-header a.link.mr-2{
-    margin-right: 5%
-}
+
 /* END OF HEADER */
+
 
 /* BURGER MENU */
 .bm-burger-button{
-    position: fixed;
+    position: relative;
     width: 8px;
     height: 30px;
-    left: 26px;
-    top: 26px;
+    left: 1rem;
+    top: 1.25rem;
 }
 
 .bm-burger-bars {
@@ -184,23 +165,21 @@ header a.link.mr-2{
 
 .bm-cross {
     background: #FFFAFA;
-    top: 26px;
+    top: 0.5rem
 }
 
 .bm-menu-wrap {
-    position: fixed;
     height: 100%;
 }
 
-.bm-menu {
-    /* background: rgba(169,169,169,0.8);
-    
-    font-size: 1.15em; */
+div.bm-menu {
     padding: 2.5em 1.5em 0;
+    overflow: hidden;
 }
 
 .bm-morph-shape {
-    /* fill: #373a47; */
+    position: relative;
+    top:-5vh
 }
 
 .bm-item{
@@ -297,9 +276,11 @@ header a.link.mr-2{
     height: auto;
 }
 
-footer{
+/* FOOTER */
+footer.gray-bg{
     display: flex;
     justify-content: space-around;
+    max-height: 50vh;
 }
 
 footer .social, footer .address{
@@ -362,8 +343,12 @@ footer a:hover{
     .flex.column{
         flex-direction: column;
     }
-    header h1{
-        margin-top: 0.5rem;
+    header .text-container h1{
+        margin: 1vh 0 0 -1rem;
+    }
+    
+    header .text-container span{
+        margin: -1rem 0 0 -1rem;
     }
     header a.link{
         margin: 0.5rem 0 0 43px;
@@ -398,16 +383,10 @@ footer a:hover{
 
 
 @media screen and (max-width: 458px){
-    header {
-        height: 10vh;
+    header .logo{
+        margin: 0rem 0 0 8rem;
     }
-    nav{
-        justify-content: center;
-    }
-    header a.logo-container{
-        justify-content: space-evenly;
-    }
-    header nav .is-hidden-mobile, header nav h1.is-hidden-mobile{
+    header .is-hidden-mobile{
         display: none;
     }
     header .is-hidden-desktop{
@@ -417,6 +396,10 @@ footer a:hover{
         color: var(--main-gold);
         font-size: 36.5px;
         margin: 2vh 0vw 0 0;
+    }
+
+    .bm-burger-button{
+        top: 0.75rem;
     }
     
     .gray-bg h2{

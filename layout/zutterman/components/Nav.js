@@ -17,7 +17,7 @@ class Nav extends React.Component{
     }
     render(){
         return(
-            <Menu noOverlay width={280} 
+            <Menu noOverlay  width={280} 
                 isOpen={false}
                 onStateChange={(state) => this.handleStateChange(state)}>
                 <Link href="/"><a onClick={()=>this.closeMenu()} className="bm-item" >zutterman</a></Link>

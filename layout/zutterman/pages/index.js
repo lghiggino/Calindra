@@ -7,7 +7,7 @@ import Footer from "../components/Footer"
 
 export default function Zutterman() {
     return (
-      <div>
+      <>
         <Head>
           <title>Zutterman - measuring tapes</title>
           <link rel="icon" href="/favicon.ico" />
@@ -16,7 +16,7 @@ export default function Zutterman() {
         <Header></Header>
         <Main></Main>
         <Footer></Footer>
-      </div>
+      </>
     )
   }
   
