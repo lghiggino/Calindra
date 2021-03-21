@@ -280,7 +280,7 @@ div.bm-menu {
 footer.gray-bg{
     display: flex;
     justify-content: space-around;
-    max-height: 50vh;
+    max-height: 20vh;
 }
 
 footer .social, footer .address{
@@ -379,6 +379,9 @@ footer a:hover{
         background-position-x: right;
         background-position-y: bottom; 
     }
+    footer.gray-bg{
+        max-height: 40vh;
+    }
 }
 
 
@@ -408,8 +411,9 @@ footer a:hover{
         line-height: 62px;
         margin: 15% 0 0 15%;
     }
-    footer{
+    footer.gray-bg{
         flex-direction: column;
+        max-height: 50vh;
     }
     footer .social, footer .address{
         margin: 1rem auto 0;
