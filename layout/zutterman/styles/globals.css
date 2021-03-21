@@ -85,6 +85,8 @@ header{
     left: 0px;
     top: 0px;
     background:var(--main-white);
+    display:flex;
+    flex-flow: row wrap;
 }
 
 header .dots{
@@ -157,6 +159,72 @@ header a.link.mr-2{
     margin-right: 5%
 }
 /* END OF HEADER */
+
+/* BURGER MENU */
+.bm-burger-button{
+    position: fixed;
+    width: 8px;
+    height: 30px;
+    left: 26px;
+    top: 26px;
+}
+
+.bm-burger-bars {
+    background:var(--main-gold)
+}
+
+.bm-burger-bars-hover {
+    background: #a90000;
+}
+
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+}
+
+.bm-cross {
+    background: #FFFAFA;
+    top: 26px;
+}
+
+.bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+}
+
+.bm-menu {
+    /* background: rgba(169,169,169,0.8);
+    
+    font-size: 1.15em; */
+    padding: 2.5em 1.5em 0;
+}
+
+.bm-morph-shape {
+    /* fill: #373a47; */
+}
+
+.bm-item{
+    display: block;
+    transition: opacity 0.3s ease 0.4s, transform 0.3s ease 0.4s;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    margin-bottom: 1rem;
+    color: var(--main-gold);
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bm-item-list {
+    color: #b8b7ad;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* END OF BURGER MENU */
 
 .gray-bg{
     width:100%;
