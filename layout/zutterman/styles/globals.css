@@ -136,14 +136,12 @@ header a.link:hover{
     color:var(--main-blue);
     font-weight: 400;
 }
-
-
 /* END OF HEADER */
 
 
 /* BURGER MENU */
 .bm-burger-button{
-    position: relative;
+    position: fixed;
     width: 8px;
     height: 30px;
     left: 1rem;
@@ -165,25 +163,32 @@ header a.link:hover{
 
 .bm-cross {
     background: #FFFAFA;
-    top: 0.5rem
+    top: 0.5rem;
+    right: 0.3rem;
 }
 
 .bm-menu-wrap {
+    position: fixed;
     height: 100%;
 }
 
-div.bm-menu {
+.bm-menu {
     padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
     overflow: hidden;
 }
 
 .bm-morph-shape {
-    position: relative;
-    top:-5vh
+    fill: #000;
+}
+
+.bm-item-list {
+    color: #b8b7ad;
+    padding: 1em;
 }
 
 .bm-item{
-    display: block;
+    display: inline-block;
     transition: opacity 0.3s ease 0.4s, transform 0.3s ease 0.4s;
     opacity: 1;
     transform: translate3d(0px, 0px, 0px);
@@ -194,15 +199,6 @@ div.bm-menu {
     font-weight: bold;
     text-decoration: none;
 }
-
-.bm-item-list {
-    color: #b8b7ad;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
 /* END OF BURGER MENU */
 
 .gray-bg{
@@ -280,7 +276,7 @@ div.bm-menu {
 footer.gray-bg{
     display: flex;
     justify-content: space-around;
-    max-height: 20vh;
+    max-height: 50vh;
 }
 
 footer .social, footer .address{
@@ -379,9 +375,6 @@ footer a:hover{
         background-position-x: right;
         background-position-y: bottom; 
     }
-    footer.gray-bg{
-        max-height: 40vh;
-    }
 }
 
 
@@ -411,9 +404,8 @@ footer a:hover{
         line-height: 62px;
         margin: 15% 0 0 15%;
     }
-    footer.gray-bg{
+    footer{
         flex-direction: column;
-        max-height: 50vh;
     }
     footer .social, footer .address{
         margin: 1rem auto 0;
