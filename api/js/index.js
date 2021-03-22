@@ -39,7 +39,7 @@ function renderProducts(data){
     cardContainer.innerHTML = ""
     if(data.products.length === 0){return cardContainer.innerText = "Nenhum produto encontrado. Tente buscar por outras palavras."}
     else{
-        //below and above variables could be dismissed, are here for better readability of the ternary
+        //variables prepended with below and above could be dismissed, are here for better readability of the ternary
         let averageRating = renderScoreColors(data)
         let belowAverageRating = averageRating * 0.75
         let aboveAverageRating = averageRating * 1.25
@@ -74,7 +74,7 @@ function renderProducts(data){
         </div>
         `
     }
-    //input.value = ""
+    input.value = ""
 }
 
 function renderScoreColors(data){
@@ -103,12 +103,22 @@ function renderSuggestions(data){
         suggTitle.classList.remove("is-hidden")
         suggContainer.innerHTML = ""
         data.suggestions.map(el => {
-            console.log(el.term)
+            // console.log(el.term)
             suggContainer.innerHTML += `
             <div class="column is-12-mobile is-6-tablet is-4-desktop">
-                <a href="/"><span class="tag is-light is-light is-medium">${el.term}</span></a>
+                <span class="tag is-light is-light is-medium" style="cursor:pointer">${el.term}</span>
             </div>
             `
         })
     }
+    generateTagLinks()
+}
+
+function generateTagLinks(){
+    const allTags = document.querySelectorAll(".tag")
+    allTags.forEach(tag => {
+        tag.addEventListener("click", (e) => {
+            search(e.target.innerText)
+        })
+    })
 }
