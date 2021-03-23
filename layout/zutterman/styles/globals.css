@@ -79,6 +79,10 @@ body{
     display: flex;
     flex-flow: row wrap;
 }
+
+.is-hidden-desktop{
+    display: none !important;
+}
 /* END OF GLOBAL  */
 
 /* HEADER */
@@ -93,17 +97,17 @@ header{
 
 header .logo{
     position: relative;
-    height: 10vh;
-    margin: 0 0 0 3rem;
+    max-height: 7vh;
+    margin: 1.5vh 0 0 3rem;
 }
 
 header .text-container h1{
-    margin:1vh 0 0 -5rem;
-    font-weight: bold;
+    margin: 1rem 0 0 -70%;
+    font-weight: 700;
     font-size: 41.2px;
     line-height: 36px;
-    display: flex;
-    align-items: flex-end;
+    /* display: flex;
+    align-items: flex-end; */
     color: var(--main-gold);
 }
 
@@ -112,13 +116,13 @@ header .text-container span{
     font-size: 16.2px;
     line-height: 8px;
     letter-spacing: 5.4px;
-
     color: var(--main-gold);
-    margin: -1rem 0 0 -5rem;
+    margin: -1rem 0 0 -70%;
 }
 
 .links-container{
-
+    position: absolute;
+    right: 0;
 }
 
 header a.link{
@@ -196,7 +200,7 @@ header a.link:hover{
     color: var(--main-gold);
     font-family: inherit;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
 }
 /* END OF BURGER MENU */
@@ -213,7 +217,7 @@ header a.link:hover{
 }
 
 .gray-bg h2{
-    font-weight: bold;
+    font-weight: 700;
     font-size: 82.2px;
     line-height: 96px;
     color: #716565;
@@ -226,15 +230,11 @@ header a.link:hover{
     height: auto;
 }
 
-.title, .image{
-    /* outline: 1px solid red */
-}
-
 .blue-bg{
     width:100%;
     height: 100vh;
     background:var(--main-blue);
-    background-image: url("../public/images/measure2.png");
+    background-image: url("../public/images/measure2-test.png");
     background-repeat: no-repeat;
     background-size: auto;
     background-position-x: right; 
@@ -287,14 +287,13 @@ footer .social, footer .address{
 
 footer .social{
     flex: 1;
-    
 }
 footer .address{
     flex: 2;
 }
 
 footer h4{
-    font-weight: bold;
+    font-weight: 700;
     font-size: 27.2px;
     line-height: 32px;
 }
@@ -334,6 +333,12 @@ footer a:hover{
     }
 }
 
+@media screen and (max-width: 885px){
+    .gray-bg, .blue-bg{
+        flex-direction: column;
+    }
+}
+
 
 @media screen and (max-width: 768px){
     .flex.column{
@@ -349,18 +354,19 @@ footer a:hover{
     header a.link{
         margin: 0.5rem 0 0 43px;
     }
-    .gray-bg, .blue-bg{
-        flex-direction: column;
-    }
     .gray-bg h2{
-        font-weight: bold;
+        font-weight: 700;
         font-size: 67.7px;
         line-height: 79px;
+        max-width: 80%;
         margin: 15% 0 0 30%;
     }
     .blue-bg h2{
-        font-size: 41.2px;
-        line-height: 48px;
+        font-weight: 700;
+        font-size: 67.7px;
+        line-height: 79px;
+        max-width: 80%;
+        margin: 15% auto;
     }
     .blue-bg p{
         font-size: 26.2px;
@@ -369,18 +375,23 @@ footer a:hover{
 
     .blue-bg{
         background:var(--main-blue);
-        background-image: url("../public/images/measure2.png");
+        background-image: url("../public/images/measure2-test.png");
         background-repeat: no-repeat;
         background-size: 70%;
         background-position-x: right;
         background-position-y: bottom; 
+    }
+    footer .social, footer .address{
+        align-items: center;
+        flex:1;
+        margin: 3rem 0;
     }
 }
 
 
 @media screen and (max-width: 458px){
     header .logo{
-        margin: 0rem 0 0 8rem;
+        margin: 1.5vh 0 0 8rem;
     }
     header .is-hidden-mobile{
         display: none;
@@ -399,10 +410,32 @@ footer a:hover{
     }
     
     .gray-bg h2{
-        font-weight: bold;
+        font-weight: 700;
         font-size: 53.2px;
         line-height: 62px;
         margin: 15% 0 0 15%;
+    }
+    .blue-bg h2{
+        font-weight: 700;
+        font-size: 41.2px;
+        line-height: 48px;
+        max-width: 90%;
+        margin: 15% auto;
+       
+    }
+    .blue-bg p{
+        font-size: 26.2px;
+        line-height: 31px;
+        max-width: 90%;
+        margin: 15% auto;
+    }
+    .blue-bg{
+        background:var(--main-blue);
+        background-image: url("../public/images/measure2-test.png");
+        background-repeat: no-repeat;
+        background-size: 259px;
+        background-position-x: right;
+        background-position-y: bottom; 
     }
     footer{
         flex-direction: column;

@@ -1,5 +1,6 @@
-<svg width="682" height="335" viewBox="0 0 682 335" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="682" height="335" viewBox="0 0 682 335" fill="trasparent" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g style="mix-blend-mode:multiply">
+<feBlend mode="multiply"/>
 <rect width="682" height="335" fill="url(#pattern0)"/>
 </g>
 <defs>
