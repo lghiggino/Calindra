@@ -6,6 +6,9 @@ burgerIcon.addEventListener("click", () => {
     navbarMenu.classList.toggle("is-active")
 })
 
+//clearing everything on logo link click
+
+
 //listening for the "enter" or click, and fetching data
 const input = document.querySelector(".input")
 const searchButton = document.querySelector("#search-button")
@@ -28,10 +31,16 @@ async function search(item){
         const data = await res.json()
         renderProducts(data)
         renderSuggestions(data)
+        pushIntoHistory(item)
     } 
     catch(err){
         throw new Error(err)
     }
+}
+
+function pushIntoHistory(item){
+    let data = item;
+    history.pushState(data, null, `${item}.html`)
 }
 
 function renderProducts(data){
@@ -74,7 +83,6 @@ function renderProducts(data){
         </div>
         `
     }
-    input.value = ""
 }
 
 function renderScoreColors(data){
@@ -98,7 +106,10 @@ function renderVisitColors(data){
 function renderSuggestions(data){
     const suggTitle = document.querySelector("#sugg-title")
     const suggContainer = document.querySelector("#sugg-container")
-    if(data.suggestions.length === 0){return suggestionTitle.classList.contains("is-hidden") ? "" : suggestionTitle.classList.add("is-hidden")}
+    if(data.suggestions.length === 0){
+        suggestionTitle.classList.contains("is-hidden") ? "" : suggestionTitle.classList.add("is-hidden")
+        return
+    }
     else{
         suggTitle.classList.remove("is-hidden")
         suggContainer.innerHTML = ""
@@ -119,6 +130,14 @@ function generateTagLinks(){
     allTags.forEach(tag => {
         tag.addEventListener("click", (e) => {
             search(e.target.innerText)
+            input.value = e.target.innerText
         })
     })
 }
+
+generateTagLinks()
+
+window.addEventListener("popstate", (e) => {
+    search(e.state)
+    input.value = e.state
+})
