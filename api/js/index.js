@@ -133,7 +133,6 @@ window.addEventListener("popstate", (e) => {
     if (e.state !== null){
         renderProducts(e.state.data)
         renderSuggestions(e.state.data)
-        //search(e.state.id);
         input.value = e.state.id;
     }
     else{
