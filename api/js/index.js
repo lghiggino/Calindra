@@ -6,7 +6,7 @@ burgerIcon.addEventListener("click", () => {
     navbarMenu.classList.toggle("is-active");
 })
 
-//listening for the "enter" or click, and fetching data
+//ouvindo pelo "enter" or click, e buscando os dados
 const input = document.querySelector(".input");
 const searchButton = document.querySelector("#search-button");
 
@@ -43,7 +43,7 @@ function renderProducts(data){
     if(data === null){return cardContainer.innerText = "Olá! Digite o produto desejado, click ou aperte enter, e compare os resultados."}
     else if(data.products.length === 0){return cardContainer.innerText = "Nenhum produto encontrado. Tente buscar por outras palavras."}
     else{
-        //variables prepended with below and above could be dismissed, are here for better readability of the ternary
+        //variáveis iniciadas com below e above são apenas para melhor leitura do ternary abaixo
         const averageRating = generateScoreAverage(data);
         const belowAverageRating = averageRating * 0.75;
         const aboveAverageRating = averageRating * 1.25;
@@ -102,7 +102,6 @@ function renderSuggestions(data){
         suggTitle.classList.remove("is-hidden");
         suggContainer.innerHTML = "";
         data.suggestions.map(el => {
-            // console.log(el.term)
             suggContainer.innerHTML += `
             <div class="column is-12-mobile is-6-tablet is-4-desktop">
                 <span class="tag is-light is-light is-medium" style="cursor:pointer">${el.term}</span>
@@ -123,24 +122,23 @@ function generateTagLinks(){
     })
 }
 
-//handling the history API
+//administrando a history API
 function pushIntoHistory(item,data){
-    //store the data in the history object, and then just re-render it, avoiding a new fetch
+    //ao se guardar o data no objeto do history, podemos apenas re-renderizar os dados, evitando um novo fetch, e a criação de histórico dobrado.
     history.pushState({id:item, data:data}, null, "");
 }
 
 window.addEventListener("popstate", (e) => {
     if (e.state !== null){
-        renderProducts(e.state.data)
-        renderSuggestions(e.state.data)
+        renderProducts(e.state.data);
+        renderSuggestions(e.state.data);
         input.value = e.state.id;
     }
     else{
-        renderProducts(null)
+        renderProducts(null);
         input.value = "";
     }
 })
 
-
-//to initialize the page with a few hardcoded working suggestions
+//existe para que sejam geradas tags funcionais na página inicial
 generateTagLinks();
