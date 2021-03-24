@@ -206,7 +206,8 @@ header a.link:hover{
     width:100%;
     height: 100vh;
     background:var(--main-blue);
-    background-image: url("../public/images/measure2-test.png");
+    background-image: url("../public/images/measure2.svg");
+    background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: 75%;
     background-position-x: right; 
@@ -243,7 +244,7 @@ header a.link:hover{
 
 /* FOOTER */
 footer.gray-bg{
-    max-height: 25vh;
+    max-height: 30vh;
 }
 
 footer .social, footer .address{
