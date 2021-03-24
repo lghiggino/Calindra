@@ -6,20 +6,19 @@ burgerIcon.addEventListener("click", () => {
     navbarMenu.classList.toggle("is-active")
 })
 
-//clearing everything on logo link click
-
-
 //listening for the "enter" or click, and fetching data
 const input = document.querySelector(".input")
 const searchButton = document.querySelector("#search-button")
 
-searchButton.addEventListener("click", () => {
+searchButton.addEventListener("click", (e) => {
+    e.preventDefault()
     let item = input.value
     search(item)
 })
 
 window.addEventListener("keydown", (e) => {
     if (e.key === "Enter"){
+        e.preventDefault()
         let item = input.value
         search(item)
     }
@@ -36,11 +35,6 @@ async function search(item){
     catch(err){
         throw new Error(err)
     }
-}
-
-function pushIntoHistory(item){
-    let data = item;
-    history.pushState(data, null, `${item}.html`)
 }
 
 function renderProducts(data){
@@ -79,7 +73,7 @@ function renderProducts(data){
         })
         cardContainer.innerHTML += `
         <div class="column is-12">
-            <p class="subtitle is-size-6">Itens na cor verde estão 25% ou mais acima da média. Itens em vermelho estão 25% ou mais abaixo da média. Itens em preto estão no intervalo da média +- 25%</p>
+            <p class="subtitle is-size-6">Itens na cor verde estão 25% ou mais acima da média. Itens em vermelho estão 25% ou mais abaixo da média. Itens em preto estão na média +- 25%</p>
         </div>
         `
     }
@@ -108,6 +102,7 @@ function renderSuggestions(data){
     const suggContainer = document.querySelector("#sugg-container")
     if(data.suggestions.length === 0){
         suggestionTitle.classList.contains("is-hidden") ? "" : suggestionTitle.classList.add("is-hidden")
+        suggContainer.innerHTML = ""
         return
     }
     else{
@@ -135,9 +130,24 @@ function generateTagLinks(){
     })
 }
 
-generateTagLinks()
+//handling the history API
+function pushIntoHistory(item){
+    history.pushState(item, null, ``) 
+}
 
 window.addEventListener("popstate", (e) => {
-    search(e.state)
-    input.value = e.state
+    if (e.state !== null){
+        search(e.state)
+        input.value = e.state
+    }else{
+        location.href ="./"
+        input.value = ""
+    }
+    
 })
+
+
+
+
+//to initialize the page with a few hardcoded working suggestions
+generateTagLinks()
