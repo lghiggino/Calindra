@@ -1,4 +1,4 @@
-Cirado com [Next.js](https://nextjs.org/) bootstrapped com [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Criado com [Next.js](https://nextjs.org/) bootstrapped com [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Começando
 
