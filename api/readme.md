@@ -11,3 +11,6 @@ Por se tratar de uma SPA a navegação do histórico ficou comprometida, então 
 ## Instalação
 Nenhuma instalação se faz necessária. O projeto está apto a rodar assim que descompactado
 
+## Versão ao vivo
+Pode ser visto em:  https://calindra-api-b2w.vercel.app/
+
