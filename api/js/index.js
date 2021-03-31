@@ -80,13 +80,13 @@ function renderProducts(data){
 
 function generateScoreAverage(data){
     let allScores = data.products.map(el => el["_meta"].score);
-    let averageScore = allScores.reduce((acc,curr) => acc+curr,0)/6;
+    let averageScore = allScores.reduce((acc,curr) => acc+curr,0)/data.products.length;
     return Number(averageScore.toFixed(4));
 }
 
 function generateVisitAverage(data){
     let allVisits = data.products.map(el => el["_meta"].visitsClickCount);
-    let averageVisits = allVisits.reduce((acc,curr) => +acc + +curr,0)/6;
+    let averageVisits = allVisits.reduce((acc,curr) => +acc + +curr,0)/data.products.length;
     return Number(averageVisits.toFixed(4));
 }
 
